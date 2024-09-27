@@ -32,7 +32,7 @@ app.use('/api', dashboardRoutes);
 app.get("/", (req, res) => res.send("Express on Vercel"));
 
 testDatabaseConnection().then(()=>{
-    app.listen(3003, () => console.log("Server ready on port 3000."));
+    app.listen(3004, () => console.log("Server ready on port 3000."));
 })
 
 module.exports = app;
