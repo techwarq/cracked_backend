@@ -62,3 +62,4 @@ export const getDashboardMetrics = async (
     await prisma.$disconnect(); // Disconnect from Prisma client
   }
 };
+

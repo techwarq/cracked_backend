@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
+import { getDashboardMetrics } from '../controllers/dashboardController';
 
 const router = express.Router();
 const prisma = new PrismaClient();
@@ -121,5 +122,5 @@ router.delete('/topics/:topicId/questions/:questionId', async (req: Request, res
     res.status(500).json({ error: 'An error occurred while deleting the question' });
   }
 });
-
+router.get('/metrics', getDashboardMetrics);
 export default router;
